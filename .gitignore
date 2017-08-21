@@ -1,0 +1,7 @@
+main
+core
+*.o
+*.swp
+*.swo
+*.pyc
+!lib.o
