@@ -15,7 +15,7 @@
 
 using namespace std;
 /* 63 for big screen, 43 for 15 inch notebook. */
-const int PRINTGAP = 47;
+const int PRINTGAP = 23;
 
 int main(int argc, const char *argv[]) {
     srand (unsigned(time(0)));
@@ -33,6 +33,7 @@ int main(int argc, const char *argv[]) {
 #ifdef DEBUG 
     printBanner(banners[0], PRINTGAP);
     printArray(nums, N);
+    cout << endl;
 #endif
     while (1) {
         usage ();
@@ -138,22 +139,22 @@ void usage () {
     cout << 
         "[1]: Bubble Sort       "
         "[2]: Insert Sort       "
-        "[3]: Quick  Sort       "
-        "[4]: Quick Sort(Optimized) "
-        "[5]: Shell  Sort       \n"
-        "[6]: Heap   Sort       "
+        "[3]: Quick  Sort     \n"
+        "[4]: Quick  Sort(Op)   "
+        "[5]: Shell  Sort       "
+        "[6]: Heap   Sort     \n"
         "[7]: Merge  Sort       "
         "[8]: Bucket Sort       "
-        "[9]: Radix  Sort           "
+        "[9]: Radix  Sort     \n"
         "[10]:Library Fun       "
-        "[*]: Quit Selection"
-        << endl;
+        "[*]: Quit Selection  \n";
+    cout << "Input Here: ";
     return;
 }
 
 inline void printSharp (int cnt = 20) {
     for (int i = 0; i < cnt; ++i) {
-        cout << "#";
+        cout << "-";
     }
     return;
 }
@@ -167,8 +168,9 @@ void printBanner (const char *banner, int nRepeat) {
 }
 
 void printArray (int *nums, int N) {
+    int numOfLine = 9;
     for (int i = 0; i < N; ++i) {
-        if ((i > 0) && (i % 20 == 0))
+        if ((i > 0) && (i % numOfLine == 0))
           cout << endl;
         printf("%6d ", nums[i]);
         //cout << nums[i] << " ";
