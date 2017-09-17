@@ -20,7 +20,7 @@
     g++ -o main mysort.o
 
 ## Example
-    ``` bash
+``` bash
     > ./sortgallery
     ----------------------- Original Array -----------------------
         -5     87    -13    -85      4     67     33    -65     45
