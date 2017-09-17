@@ -21,7 +21,7 @@
 
 ## Example
     ``` bash
-    ./sortgallery
+    > ./sortgallery
     ----------------------- Original Array -----------------------
         -5     87    -13    -85      4     67     33    -65     45
        -48    -53    -51    -40     88    -40
@@ -77,6 +77,7 @@
     [7]: Merge  Sort       [8]: Bucket Sort       [9]: Radix  Sort
     [10]:Library Fun       [*]: Quit Selection
     Input Here: q
+    > 
 
     ```
 
