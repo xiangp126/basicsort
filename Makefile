@@ -5,13 +5,13 @@ OBJS = mysort.o
 
 all: sortgallery
 
-main:${OBJS}
-	${CC} -o $@ ${OBJS}	
 mysort.o: sortgallery.cpp sortgallery.h
 	${CC} -o $@ ${CFLAGXX} -c $< 
+
+sortgallery:${OBJS}
+	${CC} -o $@ ${OBJS}	
 
 .PHONY: 
 clean:
 	@echo "Removing binary and object files..."
 	-rm -f *.o sortgallery core data.txt
-	
